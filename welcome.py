@@ -71,7 +71,7 @@ with tab1:
         title='Bastar Craton',
         x_axis_label='Si',
         y_axis_label='Ca')
-  s.circle(dfk['Si'], dfk['Ca'], color=color, size = 15, line_width=2)
+  s.circle(dfk['Si'], dfk['Ca'], size = 15, line_width=2)
   
 with tab2:
    st.header("A dog")
