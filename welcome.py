@@ -70,7 +70,7 @@ with tab1:
   s = figure(
         title='Bastar Craton',
         x_axis_label='Si',
-        y_axis_label='Ca)
+        y_axis_label='Ca')
   s.circle(df['Si'], df['Ca'], color=color, size = 15, legend_label=datafiles[0][:-4], line_width=2)
   
 with tab2:
