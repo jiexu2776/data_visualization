@@ -39,23 +39,23 @@ p = figure(
 genre = st.radio(
     "What\'s your factor for standard deviation",
     ('1sd', '2sd', '3sd'))
-
-for i in datafiles:
+colors = ['red', 'navy', 'black', 'pink', 'purple']
+for i, color in zip(datafiles, colors):
   df = pd.read_csv(i)
-  p.circle(df[x_data], df[y_data], color="navy", size = 15, legend_label='Trend', line_width=2)
-  p.line(df[x_data], df[y_data].mean(), color="pink", line_width=2)
+  p.circle(df[x_data], df[y_data], color=color, size = 15, legend_label='Trend', line_width=2)
+  p.line(df[x_data], df[y_data].mean(), color=color, line_width=2)
   
   if genre == '1sd':
-    p.line(df[x_data], df[y_data].mean()-df[y_data].std(), line_width=2)
-    p.line(df[x_data], df[y_data].mean()+df[y_data].std(), line_width=2)
+    p.line(df[x_data], df[y_data].mean()-df[y_data].std(),color=color, line_width=2)
+    p.line(df[x_data], df[y_data].mean()+df[y_data].std(), color=color,line_width=2)
     st.write('You selected 1sd')
   if genre == '2sd':
-    p.line(df[x_data], df[y_data].mean()-2*df[y_data].std(), line_width=2)
-    p.line(df[x_data], df[y_data].mean()+2*df[y_data].std(), line_width=2)
+    p.line(df[x_data], df[y_data].mean()-2*df[y_data].std(), color=color,line_width=2)
+    p.line(df[x_data], df[y_data].mean()+2*df[y_data].std(), color=color,line_width=2)
     st.write('You selected 2sd')
   if genre == '3sd':
-    p.line(df[x_data], df[y_data].mean()-3*df[y_data].std(), line_width=2)
-    p.line(df[x_data], df[y_data].mean()+3*df[y_data].std(), line_width=2)
+    p.line(df[x_data], df[y_data].mean()-3*df[y_data].std(), color=color,line_width=2)
+    p.line(df[x_data], df[y_data].mean()+3*df[y_data].std(), color=color,line_width=2)
     st.write('You selected 3sd')  
   
 
