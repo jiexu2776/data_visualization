@@ -42,7 +42,7 @@ genre = st.radio(
 colors = ['red', 'navy', 'black', 'pink', 'purple']
 for i, color in zip(datafiles, colors):
   df = pd.read_csv(i)
-  p.circle(df[x_data], df[y_data], color=color, size = 15, legend_label=i[:-3], line_width=2)
+  p.circle(df[x_data], df[y_data], color=color, size = 15, legend_label=i[:-4], line_width=2)
   p.line(df[x_data], df[y_data].mean(), color=color, line_width=2)
   
   if genre == '1sd':
