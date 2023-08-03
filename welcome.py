@@ -21,3 +21,5 @@ el_list = df.columns.tolist()[27:100]
 st.selectbox('select element', el_list)
 
 st.multiselect('select location', file_name_list)
+
+st.camera_input(label, key=None, help=None, on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")
