@@ -20,7 +20,10 @@ st.dataframe(df)
 
 
 el_list = df.columns.tolist()[27:100]
-st.selectbox('select element', el_list)
+x_data = st.selectbox('select x element', el_list)
+y_data = st.selectbox('select y element', el_list)
+
+
 
 st.multiselect('select location', file_name_list, file_name_list[0])
 
@@ -30,9 +33,9 @@ y = [6, 7, 2, 4, 5]
 
 p = figure(
     title='simple line example',
-    x_axis_label='x',
-    y_axis_label='y')
+    x_axis_label=x_data,
+    y_axis_label=y_data)
 
-p.line(x, y, legend_label='Trend', line_width=2)
+p.line(df[x_data], df[y_data], legend_label='Trend', line_width=2)
 
 st.bokeh_chart(p, use_container_width=True)
