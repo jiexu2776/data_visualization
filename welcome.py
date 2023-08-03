@@ -37,5 +37,8 @@ p = figure(
     y_axis_label=y_data)
 
 p.line(df[x_data], df[y_data], legend_label='Trend', line_width=2)
+p.line(df[x_data], df[y_data].mean(), line_width=2)
+
+
 
 st.bokeh_chart(p, use_container_width=True)
