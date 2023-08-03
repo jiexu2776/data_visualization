@@ -68,9 +68,9 @@ with tab1:
   st.header("A cat")
   df = pd.read_csv('Bastar Craton.csv')
   s = figure(
-        title='simple line example',
-        x_axis_label=x_data,
-        y_axis_label=y_data)
+        title='Bastar Craton',
+        x_axis_label='Si',
+        y_axis_label='Ca)
   s.circle(df['Si'], df['Ca'], color=color, size = 15, legend_label=datafiles[0][:-4], line_width=2)
   
 with tab2:
