@@ -62,5 +62,21 @@ with col2:
   
   st.bokeh_chart(p, use_container_width=True)
 
+tab1, tab2, tab3 = st.tabs(["Cat", "Dog", "Owl"])
 
+with tab1:
+   st.header("A cat")
+    df = pd.read_csv(datafiles[0])
+    s = figure(
+        title='simple line example',
+        x_axis_label=x_data,
+        y_axis_label=y_data)
+    s.circle(df[x_data], df[y_data], color=color, size = 15, legend_label=datafiles[0][:-4], line_width=2)
+  
+with tab2:
+   st.header("A dog")
+   st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
 
+with tab3:
+   st.header("An owl")
+   st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
