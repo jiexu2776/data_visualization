@@ -9,11 +9,11 @@ for i in os.listdir():
     file_name_list.append(i)
 
 
-st.selectbox('select location', file_name_list)
+select_file = st.selectbox('select location', file_name_list)
 
 st.write('Hello world')
 
-df = pd.read_csv ('Bastar Craton.csv')
+df = pd.read_csv (select_file)
 st.dataframe(df)
 
 
