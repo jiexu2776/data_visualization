@@ -66,12 +66,12 @@ tab1, tab2, tab3 = st.tabs(["Cat", "Dog", "Owl"])
 
 with tab1:
   st.header("A cat")
-  df = pd.read_csv('Bastar Craton.csv')
+  dfk = pd.read_csv('Bastar Craton.csv')
   s = figure(
         title='Bastar Craton',
         x_axis_label='Si',
         y_axis_label='Ca')
-  s.circle(df['Si'], df['Ca'], color=color, size = 15, legend_label=datafiles[0][:-4], line_width=2)
+  s.circle(dfk['Si'], dfk['Ca'], color=color, size = 15, legend_label=datafiles[0][:-4], line_width=2)
   
 with tab2:
    st.header("A dog")
