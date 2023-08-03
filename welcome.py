@@ -22,4 +22,4 @@ st.selectbox('select element', el_list)
 
 st.multiselect('select location', file_name_list)
 
-st.camera_input(label, key=None, help=None, on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")
+st.camera_input(label, disabled=False, label_visibility="visible")
