@@ -17,7 +17,7 @@ st.write('Hello world')
 
 
 
-df = pd.read_csv('Bastar Craton')
+df = pd.read_csv('Bastar Craton.csv')
 el_list = df.columns.tolist()[27:100]
 x_data = st.selectbox('select x element', el_list)
 y_data = st.selectbox('select y element', el_list)
