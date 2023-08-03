@@ -33,9 +33,8 @@ with col1:
   ele = st.selectbox('element to display', el_list)
   database = []
   for i in datafiles:
-    df = pd.read_csv(i)
-    database.append(df)
-    st.dataframe(database[ele])
+    df = pd.read_csv(i[0])
+    st.dataframe(df[ele])
     
 with col2:
   p = figure(
