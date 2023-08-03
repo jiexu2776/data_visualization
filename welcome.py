@@ -15,8 +15,7 @@ for i in os.listdir():
 
 st.write('Hello world')
 
-df = pd.read_csv (select_file)
-st.dataframe(df)
+
 
 
 el_list = df.columns.tolist()[27:100]
