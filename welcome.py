@@ -36,7 +36,7 @@ p = figure(
     x_axis_label=x_data,
     y_axis_label=y_data)
 
-p.circle(df[x_data], df[y_data], color="navy", legend_label='Trend', line_width=2)
+p.circle(df[x_data], df[y_data], color="navy", size = 15, legend_label='Trend', line_width=2)
 p.line(df[x_data], df[y_data].mean(), line_width=2)
 p.line(df[x_data], df[y_data].mean()-df[y_data].std(), line_width=2)
 p.line(df[x_data], df[y_data].mean()+df[y_data].std(), line_width=2)
