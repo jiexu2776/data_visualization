@@ -66,7 +66,7 @@ tab1, tab2, tab3 = st.tabs(["Cat", "Dog", "Owl"])
 
 with tab1:
   st.header("A cat")
-  df = pd.read_csv(datafiles[0])
+  df = pd.read_csv('Bastar Craton.csv')
   s = figure(
         title='simple line example',
         x_axis_label=x_data,
