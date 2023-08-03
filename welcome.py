@@ -1,6 +1,7 @@
 import streamlit as st
-# import matplotlib as plt
 import pandas as pd
+import matplotlib as plt
+
 
 st.write('Hello world')
 
