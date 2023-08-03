@@ -37,6 +37,9 @@ p = figure(
     y_axis_label=y_data)
 
 
+p.circle(df[x_data], df[y_data], color="navy", size = 15, legend_label='Trend', line_width=2)
+p.line(df[x_data], df[y_data].mean(), line_width=2)
+
 genre = st.radio(
     "What\'s your factor for standard deviation",
     ('1sd', '2sd', '3sd'))
@@ -56,8 +59,7 @@ else:
 
 
 
-p.circle(df[x_data], df[y_data], color="navy", size = 15, legend_label='Trend', line_width=2)
-p.line(df[x_data], df[y_data].mean(), line_width=2)
+
 
 
 
