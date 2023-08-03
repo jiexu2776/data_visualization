@@ -30,10 +30,7 @@ col1, col2 = st.columns(2)
 
 with col1:
   ele = st.selectbox('element to display', el_list)
-  database = []
-  for i in datafiles:
-    df = pd.read_csv(i[0])
-    st.dataframe(df[ele])
+  st.dataframe(df[ele])
     
 with col2:
   p = figure(
